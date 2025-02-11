@@ -94,7 +94,7 @@
           img.width = "240";
           tmp.appendChild(img);
           const title = document.createElement("h5");
-          title.textContent = u.name && "이름없음";
+          title.textContent = u.name || "이름없음"; // ?? 널병합은 Undefined하고 null만. || 앞이 false평가 - 빈 문자열도 false 평가 -> 뒤에 있는 것을 합쳐준다
           tmp.appendChild(title);
           box.appendChild(tmp);
         }
